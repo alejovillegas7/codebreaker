@@ -56,6 +56,7 @@ describe('GET /setsecret:number', ()=>{
 
     });
 
+
     it('should return correct message', function(done){
 
         request.get('/setsecret/1234')
@@ -115,8 +116,7 @@ describe('GET /guess/:number', function(){
                 should.not.exist(err);
                 should.exist(res);
                 res.body.should.be.an.Object;
-                should.exist(res.body.result);
-                assert.equal('XXXX', res.body.result);
+                should.exist('XXXX', res.body.result);
                 done()
 
             })
